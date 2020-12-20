@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@keyframes example {
+    0%   {transform: translateY(-20px);}
+    50%  {transform: translateY(-10px);}
+    100% {transform: translateY(-20px);}
+  }
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #303030;
+    cursor: pointer;
+}
+body{
+    color: #575757;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+#service-section{
+    position: relative;
+    padding-bottom: 70px;
+    padding-top: 95px;
+    background: #F6F8FF;
+}
+#service-section::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1000px;
+    height: 900px;
+    background: url(../img/service-shape.png) no-repeat;
+    background-position: 100% 90%;
+}
+
+.animate-1{
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 6%;
+    top: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.animate-1 img{
+    max-width: 100%;
+}
+
+.animate-2{
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 1;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.service-title{
+    text-align: center;
+}
+
+.service-title h3{
+    font-size: 18px;
+    color: #19C133;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.service-title h1{
+    position: relative;
+    padding-bottom: 4px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #2b343b;
+    margin-top: 12px;
+    line-height: 1.2;
+}
+
+.service-title h1::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background-color: #19C133;
+    width: 60px;
+    height: 1px;
+    margin-left: -32px;
+    margin-bottom: -11px;
+    z-index: 1;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.items{
+    width: 33.3333%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.items .item{
+    position: relative;
+    transition: transform .5s ease;
+    background: #fff;
+    margin-bottom: 50px;
+    padding: 40px 25px 0px;
+    text-align: center;
+    box-shadow: 0 5px 83px 0 rgba(40, 40, 40, .08);
+    border-radius: 8px;
+}
+.items .item::before{
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #19C133;
+    content: "";
+    left: 5px;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.items .item:hover:before {
+    width: 97%;
+    transition: all 0.3s ease-in-out;
+}
+
+.items .item .icon-img{
+    position: relative;
+    margin-top: 21px;
+    margin-bottom: 22px;
+    z-index: 9;
+}
+
+.items .item .icon-img i{
+    background: #fff;
+    box-shadow: 1px 1px 15px #eaefef;
+    font-size: 40px;
+    border-radius: 50%;
+    color: #19C133;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+}
+
+.items .item:hover .icon-img{
+    transform: rotateY(360deg);
+    transition: all 700ms ease;
+}
+
+.items .item .service-text{
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+}
+
+.items .item .service-text a h4{
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.items .item .service-btn{
+    position: absolute;
+    bottom: -20px;
+    left: 45%;
+    display: inline-block;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #19C133;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+.items .item .service-btn i{
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.items .item:hover .service-btn{
+    transform: translateY(-5px);
+}
+
+.items .item::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0px;
+    width: 100%;
+    height: 171px;
+    margin: 0 auto;
+    background: url(../img/service-icon-1.png) no-repeat top center;
+}
